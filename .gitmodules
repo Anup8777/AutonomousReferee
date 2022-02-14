@@ -1,0 +1,3 @@
+[submodule "AutonomousReferee/legacy/drone_ref_trial_aak"]
+	path = AutonomousReferee/legacy/drone_ref_trial_aak
+	url = https://gitlab.tue.nl/20204924/drone_ref_trial_aak.git

@@ -1,0 +1,14 @@
+test_images/
+*/slprj/
+*/*.slxc
+images/
+videos/
+output_videos/
+*/*.asv
+slprj/
+*.slxc
+*.asv
+*/*.autosave
+*.autosave
+.vs/
+*/.vs/

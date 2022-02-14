@@ -1,0 +1,1973 @@
+#VRML V2.0 utf8
+
+#Created with V-Realm Builder v2.0
+#Integrated Data Systems Inc.
+#www.ids-net.com
+
+
+DirectionalLight {
+	direction	-0.707107 0 -0.707107
+	intensity	0.5
+}
+DirectionalLight {
+	direction	0.707107 0 -0.707107
+	intensity	0.5
+}
+DirectionalLight {
+	ambientIntensity	0.1
+	direction	0 -0.707107 -0.707107
+	intensity	0.7
+	on	TRUE
+}
+DirectionalLight {
+	ambientIntensity	0.1
+	direction	0 0.707107 -0.707107
+	intensity	0.7
+	on	TRUE
+}
+DEF Custom_Top_Camera Viewpoint {
+	fieldOfView	1.2
+	position	0 0 12
+	description	"custom_top_view"
+}
+DEF Camera_Top Viewpoint {
+	fieldOfView	2.21
+	position	0 0 6
+	description	""
+}
+DEF Corner_cam_NE Transform {
+	translation	12 9 0
+	rotation	0 0 1  2.35619
+	children Viewpoint {
+		fieldOfView	1.57
+		orientation	1 0 0  0.959931
+		position	0 0 3.5
+	}
+}
+DEF Corner_cam_NW Transform {
+	translation	-12 9 0
+	rotation	0 0 -1  2.35619
+	children Viewpoint {
+		fieldOfView	1
+		orientation	1 0 0  0.959931
+		position	0 0 3.5
+	}
+}
+DEF Corner_cam_SW Transform {
+	translation	-12 -9 0
+	rotation	0 0 -1  0.785398
+	children Viewpoint {
+		fieldOfView	1
+		orientation	1 0 0  1.0472
+		position	0 0 3.5
+	}
+}
+DEF Corner_cam_SE Transform {
+	translation	12 -9 0
+	rotation	0 0 1  0.785398
+	children Viewpoint {
+		fieldOfView	1
+		orientation	1 0 0  1.0472
+		position	0 0 3.5
+	}
+}
+DEF Camera_LH Viewpoint {
+	fieldOfView	0.785398
+	position	-5 0 10
+}
+DEF Camera_RH Viewpoint {
+	position	5 0 10
+}
+DEF Football2 Transform {
+	translation	1 1 0.2
+	children Shape {
+		appearance	Appearance {
+			material	Material {
+				ambientIntensity	0.3
+				diffuseColor	0.8 0.285522 0.0146277
+			}
+
+		}
+
+		geometry	Sphere {
+			radius	0.1
+		}
+
+	}
+}
+DEF Field Transform {
+	translation	2.83718e-005 -1.13212e-005 3.57628e-007
+	scale	1.00196 1.00196 1.00196
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.1
+				    diffuseColor	0.036 0.36 0.256433
+				    shininess	0
+			    }
+
+		    }
+
+		    geometry	Box {
+			    size	26 25 0.05
+		    }
+
+	    }
+
+	    DEF Goal_Line_West Transform {
+		    translation	-11 0 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 14.125 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF Goal_Line_East Transform {
+		    translation	11 0 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 14.125 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF Touch_Line_South Transform {
+		    translation	0 -7 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	22 0.125 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF Touch_Line_North Transform {
+		    translation	0 7 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	22 0.125 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF MidLine Transform {
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 14 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF LP1 Transform {
+		    translation	-8.75 0 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 7.025 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF RP1 Transform {
+		    translation	8.75 0 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 7.025 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF LPN Transform {
+		    translation	-9.85 3.45 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	2.25 0.125 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF LPS Transform {
+		    translation	-9.85 -3.45 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	2.25 0.125 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF RPN Transform {
+		    translation	9.85 3.45 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	2.25 0.125 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF RPS Transform {
+		    translation	9.85 -3.45 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	2.25 0.125 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF LG1 Transform {
+		    translation	-10.25 0 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 4.025 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF RG1 Transform {
+		    translation	10.25 0 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 4.025 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF LGN Transform {
+		    translation	-10.6 1.95 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.75 0.125 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF LGS Transform {
+		    translation	-10.6 -1.95 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.75 0.125 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF RGN Transform {
+		    translation	10.6 1.95 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.75 0.125 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF RGS Transform {
+		    translation	10.6 -1.95 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.75 0.125 0.06
+			    }
+
+		    }
+	    }
+
+	    DEF Center_Outer_Circle Transform {
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.052
+				    bottom	FALSE
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.1
+					    diffuseColor	0.036 0.36 0.256433
+					    shininess	0
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.055
+				    radius	0.875
+				    bottom	FALSE
+			    }
+
+		    }
+	    }
+
+	    DEF Camera_pole_SW Transform {
+		    translation	-12 -9 0
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	3.5
+				    radius	0.05
+			    }
+
+		    }
+	    }
+
+	    DEF Camera_pole_SE Transform {
+		    translation	12 -9 0
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	3.5
+				    radius	0.05
+			    }
+
+		    }
+	    }
+
+	    DEF Camera_pole_NE Transform {
+		    translation	12 9 0
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	3.5
+				    radius	0.05
+			    }
+
+		    }
+	    }
+
+	    DEF Camera_pole_NW Transform {
+		    translation	-12 9 0
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	3.5
+				    radius	0.05
+			    }
+
+		    }
+	    }
+
+	    DEF Kickoff_spot Transform {
+		    translation	0 0 0
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.06
+				    radius	0.075
+			    }
+
+		    }
+	    }
+
+	    DEF LP_kick_spot Transform {
+		    translation	-7.4 0 0
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.052
+				    radius	0.075
+			    }
+
+		    }
+	    }
+
+	    DEF RP_kick_spot Transform {
+		    translation	7.4 0 0
+		    rotation	1 0 0  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+				    }
+
+			    }
+
+			    geometry	Cylinder {
+				    height	0.052
+				    radius	0.075
+			    }
+
+		    }
+	    }
+
+	    DEF SW_corner Group {
+		    children [ 
+			DEF SW_Corner_outer Transform {
+				translation	-11 -7 0
+				rotation	1 0 0  1.5708
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.051
+						radius	0.75
+						bottom	FALSE
+					}
+
+				}
+			}
+
+			Transform {
+				translation	-11 -7 0
+				rotation	1 0 0  1.5708
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.1
+							diffuseColor	0.036 0.36 0.256433
+							shininess	0
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.0515
+						radius	0.625
+						bottom	FALSE
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF SE_corner Group {
+		    children [ 
+			DEF SW_Corner_outer Transform {
+				translation	11 -7 0
+				rotation	1 0 0  1.5708
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.051
+						radius	0.75
+						bottom	FALSE
+					}
+
+				}
+			}
+
+			Transform {
+				translation	11 -7 0
+				rotation	1 0 0  1.5708
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.1
+							diffuseColor	0.036 0.36 0.256433
+							shininess	0
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.0515
+						radius	0.625
+						bottom	FALSE
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF NE_corner Group {
+		    children [ 
+			DEF SW_Corner_outer Transform {
+				translation	11 7 0
+				rotation	1 0 0  1.5708
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.051
+						radius	0.75
+						bottom	FALSE
+					}
+
+				}
+			}
+
+			Transform {
+				translation	11 7 0
+				rotation	1 0 0  1.5708
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.1
+							diffuseColor	0.036 0.36 0.256433
+							shininess	0
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.0515
+						radius	0.625
+						bottom	FALSE
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF NW_corner Group {
+		    children [ 
+			DEF SW_Corner_outer Transform {
+				translation	-11 7 0
+				rotation	1 0 0  1.5708
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.051
+						radius	0.75
+						bottom	FALSE
+					}
+
+				}
+			}
+
+			Transform {
+				translation	-11 7 0
+				rotation	1 0 0  1.5708
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.1
+							diffuseColor	0.036 0.36 0.256433
+							shininess	0
+						}
+
+					}
+
+					geometry	Cylinder {
+						height	0.0515
+						radius	0.625
+						bottom	FALSE
+					}
+
+				}
+			}
+		    ]
+	    }
+
+	    DEF Top_Edge Transform {
+		    translation	0 7.6 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.1
+					    diffuseColor	0.036 0.36 0.256433
+					    shininess	0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	24 1.1 0.054
+			    }
+
+		    }
+	    }
+
+	    DEF Bottom_Edge Transform {
+		    translation	0 -7.6 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.1
+					    diffuseColor	0.036 0.36 0.256433
+					    shininess	0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	24 1.1 0.054
+			    }
+
+		    }
+	    }
+
+	    DEF Left_Edge Transform {
+		    translation	-11.55 0 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.1
+					    diffuseColor	0.036 0.36 0.256433
+					    shininess	0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	1 14.5 0.054
+			    }
+
+		    }
+	    }
+
+	    DEF Right_Edge Transform {
+		    translation	11.55 0 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.1
+					    diffuseColor	0.036 0.36 0.256433
+					    shininess	0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	1 14.5 0.054
+			    }
+
+		    }
+	    }
+	]
+}
+DEF North_Wall Transform {
+	translation	0 11 3
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0.92 0.92 0.92
+			    }
+
+		    }
+
+		    geometry	Box {
+			    size	26 0.2 6
+		    }
+
+	    }
+
+	    DEF West_Wall Transform {
+		    translation	-13 -11 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.2 22.5 6
+			    }
+
+		    }
+	    }
+
+	    DEF East_Wall Transform {
+		    translation	13 -11 -2.38419e-007
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.2 22.5 6
+			    }
+
+		    }
+	    }
+
+	    DEF South_Wall Transform {
+		    translation	0 -22 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	26 0.2 6
+			    }
+
+		    }
+	    }
+	]
+}
+Transform {
+	translation	11.6 0 0.075
+	rotation	0 0 1  3.14159
+	children [ 
+	    Transform {
+		    translation	0 0 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 2.75 0.4
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0.25 1.32 0
+		    rotation	0 0 -1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 0.5 0.4
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0.25 -1.32 0
+		    rotation	0 0 1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 0.5 0.4
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0.45 -1.32 0.55
+		    rotation	0 0 1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 0.125 1.125
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0.45 1.32 0.55
+		    rotation	0 0 1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 0.125 1.125
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0.45 0 1.125
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 2.75 0.125
+			    }
+
+		    }
+	    }
+	]
+}
+Transform {
+	translation	-11.6 0 0.075
+	children [ 
+	    Transform {
+		    translation	0 0 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 2.75 0.4
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0.25 1.32 0
+		    rotation	0 0 -1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 0.5 0.4
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0.25 -1.32 0
+		    rotation	0 0 1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 0.5 0.4
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0.45 -1.32 0.55
+		    rotation	0 0 1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 0.125 1.125
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0.45 1.32 0.55
+		    rotation	0 0 1  1.5708
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 0.125 1.125
+			    }
+
+		    }
+	    }
+
+	    Transform {
+		    translation	0.45 0 1.125
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	1 1 1
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.125 2.75 0.125
+			    }
+
+		    }
+	    }
+	]
+}
+DEF RedPlayer1 Transform {
+	translation	-11 7 0.2
+	rotation	1 0 0  1.5708
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0.8 0 0
+			    }
+
+		    }
+
+		    geometry	Cone {
+			    bottomRadius	0.25
+			    height	0.8
+			    bottom	FALSE
+		    }
+
+	    }
+
+	    DEF base_box Transform {
+		    translation	0 -0.1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0 0 0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.5 0.2 0.5
+			    }
+
+		    }
+	    }
+
+	    DEF colour_marker Transform {
+		    translation	0 0.4 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0.2
+						diffuseColor	0 0 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	0.02
+					radius	0.2
+				}
+
+			}
+
+			Transform {
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.2
+							diffuseColor	0.8 0 0
+						}
+
+					}
+
+					geometry	Box {
+						size	0.15 0.021 0.15
+					}
+
+				}
+			}
+		    ]
+	    }
+	]
+}
+DEF RedPlayer2 Transform {
+	translation	-5 3.5 0.2
+	rotation	1 0 0  1.5708
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0.81 0 0
+			    }
+
+		    }
+
+		    geometry	Cone {
+			    bottomRadius	0.25
+			    height	0.8
+			    bottom	FALSE
+		    }
+
+	    }
+
+	    DEF base_box Transform {
+		    translation	0 -0.1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0 0 0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.5 0.2 0.5
+			    }
+
+		    }
+	    }
+
+	    DEF colour_marker Transform {
+		    translation	0 0.4 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0.2
+						diffuseColor	0 0 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	0.02
+					radius	0.2
+				}
+
+			}
+
+			Transform {
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.2
+							diffuseColor	0.8 0 0
+						}
+
+					}
+
+					geometry	Box {
+						size	0.15 0.021 0.15
+					}
+
+				}
+			}
+		    ]
+	    }
+	]
+}
+DEF RedPlayer3 Transform {
+	translation	4 1.8 0.2
+	rotation	1 0 0  1.5708
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0.77 0 0
+			    }
+
+		    }
+
+		    geometry	Cone {
+			    bottomRadius	0.25
+			    height	0.8
+			    bottom	FALSE
+		    }
+
+	    }
+
+	    DEF base_box Transform {
+		    translation	0 -0.1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0 0 0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.5 0.2 0.5
+			    }
+
+		    }
+	    }
+
+	    DEF colour_marker Transform {
+		    translation	0 0.4 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0.2
+						diffuseColor	0 0 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	0.02
+					radius	0.2
+				}
+
+			}
+
+			Transform {
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.2
+							diffuseColor	0.8 0 0
+						}
+
+					}
+
+					geometry	Box {
+						size	0.15 0.021 0.15
+					}
+
+				}
+			}
+		    ]
+	    }
+	]
+}
+DEF RedPlayer4 Transform {
+	translation	4 1.8 0.2
+	rotation	1 0 0  1.5708
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0.83 0.1992 0
+			    }
+
+		    }
+
+		    geometry	Cone {
+			    bottomRadius	0.25
+			    height	0.8
+			    bottom	FALSE
+		    }
+
+	    }
+
+	    DEF base_box Transform {
+		    translation	0 -0.1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0 0 0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.5 0.2 0.5
+			    }
+
+		    }
+	    }
+
+	    DEF colour_marker Transform {
+		    translation	0 0.4 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0.2
+						diffuseColor	0 0 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	0.02
+					radius	0.2
+				}
+
+			}
+
+			Transform {
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.2
+							diffuseColor	0.8 0 0
+						}
+
+					}
+
+					geometry	Box {
+						size	0.15 0.021 0.15
+					}
+
+				}
+			}
+		    ]
+	    }
+	]
+}
+DEF RedPlayer5 Transform {
+	translation	11 -7 0.2
+	rotation	1 0 0  1.5708
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0.8 0.0630396 0.016
+			    }
+
+		    }
+
+		    geometry	Cone {
+			    bottomRadius	0.25
+			    height	0.8
+			    bottom	FALSE
+		    }
+
+	    }
+
+	    DEF base_box Transform {
+		    translation	0 -0.1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0 0 0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.5 0.2 0.5
+			    }
+
+		    }
+	    }
+
+	    DEF colour_marker Transform {
+		    translation	0 0.4 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0.2
+						diffuseColor	0 0 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	0.02
+					radius	0.2
+				}
+
+			}
+
+			Transform {
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.2
+							diffuseColor	0.8 0 0
+						}
+
+					}
+
+					geometry	Box {
+						size	0.15 0.021 0.15
+					}
+
+				}
+			}
+		    ]
+	    }
+	]
+}
+DEF YellowPlayer1 Transform {
+	translation	-0.5 1.2 0.2
+	rotation	1 0 0  1.5708
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0.106216 0.1056 0.11
+			    }
+
+		    }
+
+		    geometry	Cone {
+			    bottomRadius	0.25
+			    height	0.8
+			    bottom	FALSE
+		    }
+
+	    }
+
+	    DEF base_box Transform {
+		    translation	0 -0.1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0 0 0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.5 0.2 0.5
+			    }
+
+		    }
+	    }
+
+	    DEF colour_marker Transform {
+		    translation	0 0.4 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0.2
+						diffuseColor	0 0 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	0.02
+					radius	0.2
+				}
+
+			}
+
+			Transform {
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.2
+							diffuseColor	0.8 0.76855 0.00736418
+						}
+
+					}
+
+					geometry	Box {
+						size	0.12 0.021 0.1
+					}
+
+				}
+			}
+		    ]
+	    }
+	]
+}
+DEF YellowPlayer2 Transform {
+	translation	-0.5 1.2 0.2
+	rotation	1 0 0  1.5708
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0.106216 0.1056 0.11
+			    }
+
+		    }
+
+		    geometry	Cone {
+			    bottomRadius	0.25
+			    height	0.8
+			    bottom	FALSE
+		    }
+
+	    }
+
+	    DEF base_box Transform {
+		    translation	0 -0.1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0 0 0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.5 0.2 0.5
+			    }
+
+		    }
+	    }
+
+	    DEF colour_marker Transform {
+		    translation	0 0.4 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0.2
+						diffuseColor	0 0 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	0.02
+					radius	0.2
+				}
+
+			}
+
+			Transform {
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.2
+							diffuseColor	0.8 0.76855 0.00736418
+						}
+
+					}
+
+					geometry	Box {
+						size	0.12 0.021 0.1
+					}
+
+				}
+			}
+		    ]
+	    }
+	]
+}
+DEF YellowPlayer3 Transform {
+	translation	-0.5 1.2 0.2
+	rotation	1 0 0  1.5708
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0.106216 0.1056 0.11
+			    }
+
+		    }
+
+		    geometry	Cone {
+			    bottomRadius	0.25
+			    height	0.8
+			    bottom	FALSE
+		    }
+
+	    }
+
+	    DEF base_box Transform {
+		    translation	0 -0.1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0 0 0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.5 0.2 0.5
+			    }
+
+		    }
+	    }
+
+	    DEF colour_marker Transform {
+		    translation	0 0.4 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0.2
+						diffuseColor	0 0 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	0.02
+					radius	0.2
+				}
+
+			}
+
+			Transform {
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.2
+							diffuseColor	0.8 0.76855 0.00736418
+						}
+
+					}
+
+					geometry	Box {
+						size	0.12 0.021 0.1
+					}
+
+				}
+			}
+		    ]
+	    }
+	]
+}
+DEF YellowPlayer4 Transform {
+	translation	-0.5 1.2 0.2
+	rotation	1 0 0  1.5708
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0.106216 0.1056 0.11
+			    }
+
+		    }
+
+		    geometry	Cone {
+			    bottomRadius	0.25
+			    height	0.8
+			    bottom	FALSE
+		    }
+
+	    }
+
+	    DEF base_box Transform {
+		    translation	0 -0.1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0 0 0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.5 0.2 0.5
+			    }
+
+		    }
+	    }
+
+	    DEF colour_marker Transform {
+		    translation	0 0.4 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0.2
+						diffuseColor	0 0 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	0.02
+					radius	0.2
+				}
+
+			}
+
+			Transform {
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.2
+							diffuseColor	0.8 0.76855 0.00736418
+						}
+
+					}
+
+					geometry	Box {
+						size	0.12 0.021 0.1
+					}
+
+				}
+			}
+		    ]
+	    }
+	]
+}
+DEF YellowPlayer5 Transform {
+	translation	-0.5 1.2 0.2
+	rotation	1 0 0  1.5708
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0.106216 0.1056 0.11
+			    }
+
+		    }
+
+		    geometry	Cone {
+			    bottomRadius	0.25
+			    height	0.8
+			    bottom	FALSE
+		    }
+
+	    }
+
+	    DEF base_box Transform {
+		    translation	0 -0.1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0 0 0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.5 0.2 0.5
+			    }
+
+		    }
+	    }
+
+	    DEF colour_marker Transform {
+		    translation	0 0.4 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0.2
+						diffuseColor	0 0 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	0.02
+					radius	0.2
+				}
+
+			}
+
+			Transform {
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.2
+							diffuseColor	0.8 0.76855 0.00736418
+						}
+
+					}
+
+					geometry	Box {
+						size	0.12 0.021 0.1
+					}
+
+				}
+			}
+		    ]
+	    }
+	]
+}
+DEF YellowPlayer_v2 Transform {
+	translation	-27 -7.8 0.2
+	rotation	1 0 0  1.5708
+	children [ 
+	    Shape {
+		    appearance	Appearance {
+			    material	Material {
+				    ambientIntensity	0.2
+				    diffuseColor	0.784 0.8 0
+			    }
+
+		    }
+
+		    geometry	Cone {
+			    bottomRadius	0.25
+			    height	0.8
+			    bottom	FALSE
+		    }
+
+	    }
+
+	    DEF base_box Transform {
+		    translation	0 -0.1 0
+		    children Shape {
+			    appearance	Appearance {
+				    material	Material {
+					    ambientIntensity	0.2
+					    diffuseColor	0 0 0
+				    }
+
+			    }
+
+			    geometry	Box {
+				    size	0.5 0.2 0.5
+			    }
+
+		    }
+	    }
+
+	    DEF colour_marker Transform {
+		    translation	0 0.4 0
+		    children [ 
+			Shape {
+				appearance	Appearance {
+					material	Material {
+						ambientIntensity	0.2
+						diffuseColor	0 0 0
+					}
+
+				}
+
+				geometry	Cylinder {
+					height	0.02
+					radius	0.2
+				}
+
+			}
+
+			Transform {
+				children Shape {
+					appearance	Appearance {
+						material	Material {
+							ambientIntensity	0.2
+							diffuseColor	0.8 0.76855 0.00736418
+						}
+
+					}
+
+					geometry	Box {
+						size	0.12 0.021 0.1
+					}
+
+				}
+			}
+		    ]
+	    }
+	]
+}
