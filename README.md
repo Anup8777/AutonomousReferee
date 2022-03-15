@@ -32,21 +32,25 @@ README to be edited according to the need.
 
 
 
+# Autonomous Referee System Project - MSD2021
+
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
+The main goal of the project is to develop an autonomous referee system for soccer robots which can satisfy the following goal:
+
+*"The final goal is to have a 5 minute long 2 against 2 robot soccer game, using the Tech United turtles, refereed by the system described above, which receives a positive recommendation by an experienced human referee. By positive recommendation we mean that the human referee acknowledges that the provided refereeing system, for that 5 minute long game, refereed the match well."*
+
+The full description of the project can be found under docs/[autoref_2122 comments RD.pdf](https://github.com/Anup8777/AutonomousReferee/blob/main/docs/autoref_2122%20comments%20RD.pdf "autoref_2122 comments RD.pdf")
 
 
-
-<!-- GETTING STARTED -->
-## Getting Started
-
-This is an example of how you may give instructions on setting up your project locally.
-To get a local copy up and running follow these simple example steps.
-
-### Prerequisites
-
-
+<!-- Feasibility Analysis -->
+## Feasibility Studies
+In order to develop the autonomous referee system different technologies have been taken into considerastion as follow:
+- Using simulation
+- Using Drone + Camera
+- Using surveillance cameras to record the match
+- Using Turtles (Tech United soccer robots)
 
 <!-- LICENSE -->
 ## License
@@ -55,6 +59,9 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
+
+<!-- CONTACT -->
+## Team
 
 
 <!-- CONTACT -->
