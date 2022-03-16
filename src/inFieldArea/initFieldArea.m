@@ -1,3 +1,9 @@
+% Outputs vectors containing the x and y coordinate values that are inside the field boundary. 
+% Units are in meters currently, as the dimensions are taken from the mat file, 
+% but can be converted to pixels (for future compatibility with CV-based system)
+% A value of [0,0] would be at the center of the field.
+%-------------------------------------------------------------------------%
+
 
 %function declaration and definitaion of initFieldArea%
 %-------------------------------------------------------------------------%
