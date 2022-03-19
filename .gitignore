@@ -6,6 +6,6 @@ src/data_collection/*
 docs/Architecture/Extendibility.docx
 docs/Architecture/Integration_Plan.xlsx
 docs/FeasibilityAnalysis/Turtle_feasability.pptx
-
+src/not_to_be_committed/*
 __/__*.mkv
 __/__*.mp4
