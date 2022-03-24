@@ -23,13 +23,8 @@ accelThreshold = 2;
 [ball_x, ball_y, ball_z, kickInd] = detectKickBall(matchData,useWeightAve, accelThreshold, 2,3);
 
 % violation detection
-[distViolation, indxViolation] = checkDistance(ball_x, ball_y, kickInd);
+[distViolation, indxViolation, player_id] = checkDistance(ball_x, ball_y, kickInd);
 
-% get id of player closest to the ball at violaion
-player_id = zeros(size(indxViolation));
-for i = 1:size(indxViolation,2)
-    player_id(i) = getPlayerID(matchData, ballX(indxViolation), ballY(indxViolation), indxViolation);
-end
 % create violation log
 logTask2 = zeros(1,size(matchData.replay.data,2));
 logTask2(indxViolation) = 1; 
