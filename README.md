@@ -59,17 +59,18 @@ In order to develop the autonomous referee system different technologies have be
 <!-- Implementation -->
 ## Implementation and Validation
 
-The developed code for the Task 1 and Task 2 can be found in the following folder in GitHub repository: AutonomousReferee/[src](https://github.com/Anup8777/AutonomousReferee/tree/main/src "src")
-
+The developed code in MATLAB for the Task 1 and Task 2 can be found in the following folder in GitHub repository: AutonomousReferee/[src](https://github.com/Anup8777/AutonomousReferee/tree/main/src "src")
+ 
+For example, two scenarios that the developed codes can be used to detect the violation is presented here.
+ 
 ### Task1: Ball Out of Play
 Determine if the ball is in or out of pitch (BOOP).  
 
 https://user-images.githubusercontent.com/20322579/159901992-aee37024-05e3-4a03-b4ae-37d4e773a160.mp4
 
-### Task2: Determine if the ball has rolled freely for >0.5 m after kick
+### Task2: Determine if the ball has rolled freely for > 0.5 m after kick
 
 https://user-images.githubusercontent.com/20322579/159902028-0035ea5f-ba2e-4644-b3eb-ce7a2c7c0c54.mp4
-
 
 <!-- CONTACT -->
 ## Team
