@@ -52,6 +52,30 @@ In order to develop the autonomous referee system different technologies have be
 - Using surveillance cameras to record the match
 - Using Turtles (Tech United soccer robots)
 
+<!-- System Architecture -->
+## System Architecture
+
+
+<!-- Implementation -->
+## Implementation
+
+The developed code for the Task1 and Task 2 can be found in the following folder. 
+
+<!-- CONTACT -->
+## Team
+
+This project has been carried out by the Mechatronic Systems Design (MSD) 2021 at Eindhoven University of Technology (TU/e) for the 1st in-house project in Block II of the program. The team members are as follow:
+
+Anup Padaki - System Architect (a.v.padaki@tue.nl)
+Cevahir Karagoz - Design Engineer (c.karagoz@tue.nl)
+Guilherme Pagatini - Project Manager (g.pagatini@tue.nl)
+Kian Azami - Design Engineer (k.azami@tue.nl)
+Marzhan Baubekova - Team Leader (m.baubekova@tue.nl)
+Meghna Mohamed - Design Engineer (m.mohamed@tue.nl)
+Shubo Zhang - Desgin Engineer (s.zhang6@tue.nl)
+Yuri Hudak - Design Engineer (y.f.hudak@tue.nl)
+
+
 <!-- LICENSE -->
 ## License
 
@@ -60,16 +84,13 @@ Distributed under the MIT License. See `LICENSE.txt` for more information.
 <p align="right">(<a href="#top">back to top</a>)</p>
 
 
-<!-- CONTACT -->
-## Team
+
 
 
 <!-- CONTACT -->
 ## Contact
 
-Your Name - [@your_twitter](https://twitter.com/your_username) - email@example.com
-
-Project Link: [https://github.com/your_username/repo_name](https://github.com/your_username/repo_name)
+MSD2021 AutoRef Project Link: https://github.com/Anup8777/AutonomousReferee
 
 <p align="right">(<a href="#top">back to top</a>)</p>
 
