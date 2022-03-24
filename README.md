@@ -50,7 +50,13 @@ In order to develop the autonomous referee system different technologies have be
 - Using simulation
 - Using Drone + Camera
 - Using surveillance cameras to record the match
-- Using Turtles (Tech United soccer robots)
+- Using TURTLE (Tech United soccer robots)
+
+For each of the above technology a feasibility study document has been prepared which can be found in: docs/[FeasibilityAnalysis](https://github.com/Anup8777/AutonomousReferee/tree/main/docs/FeasibilityAnalysis "FeasibilityAnalysis")
+
+![image](https://user-images.githubusercontent.com/20322579/159932182-10ca3719-1516-491d-8192-d3656c5a316b.png)
+
+Then each technology has been evaluated by PUGH matrix by each of the team members and it is decided to use TURTLEs as the main technology to develop the AutoRef system.
 
 <!-- System Architecture -->
 ## System Architecture
