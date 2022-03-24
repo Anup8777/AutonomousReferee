@@ -6,7 +6,7 @@
 % Output:
 % x, y, and theta values of the player position
 
-function [x, y, theta] = getPlayerPosition(matchData, id)
+function [x, y, theta, team_color] = getPlayerPosition(matchData, id)
 
     matchData = matchData.replay; % get data
     robot_ind = matchData.metadata.turtle(id).idx_pose; % pose indices of the robot in data
