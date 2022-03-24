@@ -80,6 +80,26 @@ https://user-images.githubusercontent.com/20322579/159901992-aee37024-05e3-4a03-
 https://user-images.githubusercontent.com/20322579/159902028-0035ea5f-ba2e-4644-b3eb-ce7a2c7c0c54.mp4
 
 <!-- CONTACT -->
+## How to get a flying start?
+
+- It is recommended to not start from the scratch.
+- It is highly recommended to get in touch with the Tech United team and use the Tech United repository in case of using TURTLES. 
+  Some of the people that you can get in touch with:<br />
+  Tech United Website: https://www.techunited.nl/en/<br />
+  Tech United (Techunited@tue.nl)<br />
+  René van de Molengraft (M.J.G.v.d.Molengraft@tue.nl)<br />
+  Ruben Beumer (r.m.beumer@tue.nl) <br />
+- In the Tech United repository there are tools that may useful for the development of the AutoRef system<br />
+  Greenfield<br />
+  Simulator<br />
+  Refbox<br />
+- Ask for permission for using the security cameras.
+  You may contact with Ömür Arslan (o.arslan@tue.nl) to ask for the permission.
+- Get in touch with MSD2021.
+- Get in touch with Matthias Briegel
+  Matthias is the person who has previously worked on developing AutoRef system and he may share some interesting ideas for the development of the AutoRef system. (matthias_briegel@hotmail.com)
+
+<!-- CONTACT -->
 ## Team
 
 This project has been carried out by the Mechatronic Systems Design (MSD) 2021 at Eindhoven University of Technology (TU/e) for the 1st in-house project in Block II of the program. The team members are as follow:
