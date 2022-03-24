@@ -75,7 +75,7 @@ https://user-images.githubusercontent.com/20322579/159902028-0035ea5f-ba2e-4644-
   Tech United (Techunited@tue.nl)<br />
   René van de Molengraft (M.J.G.v.d.Molengraft@tue.nl)<br />
   Ruben Beumer (r.m.beumer@tue.nl) <br />
-- In the Tech United repository there are tools that may be useful for the development of the AutoRef system<br />
+- In the Tech United repository there are tools that may be useful for the development of the AutoRef system.<br />
    **1. Greenfield**<br />
    This is the tool, emulator, inside the Tech United reposoitory which can collect the real time data from soccer robots during the match and save the data in a \*.mat   file. <br />
 
