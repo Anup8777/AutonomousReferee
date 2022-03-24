@@ -3,34 +3,15 @@
 README to be edited according to the need.
 -->
 
-
-<!-- TABLE OF CONTENTS -->
-<details>
-  <summary>Table of Contents</summary>
-  <ol>
-    <li>
-      <a href="#about-the-project">About The Project</a>
-      <ul>
-        <li><a href="#built-with">Built With</a></li>
-      </ul>
-    </li>
-    <li>
-      <a href="#getting-started">Getting Started</a>
-      <ul>
-        <li><a href="#prerequisites">Prerequisites</a></li>
-        <li><a href="#installation">Installation</a></li>
-      </ul>
-    </li>
-    <li><a href="#usage">Usage</a></li>
-    <li><a href="#roadmap">Roadmap</a></li>
-    <li><a href="#contributing">Contributing</a></li>
-    <li><a href="#license">License</a></li>
-    <li><a href="#contact">Contact</a></li>
-    <li><a href="#acknowledgments">Acknowledgments</a></li>
-  </ol>
-</details>
-
 # Autonomous Referee System Project - MSD2021
+
+## Table of Content
+1. [About The Project](#about-the-project)
+2. [Feasibility Studies](#feasibility-studies)
+3. [System Architecture](#system-architecture)
+4. [Implementation and Validation](#implementation-and-validation)
+5. [How to get a flying start?](#how-to-get-a-flying-start)
+6. [Team](#team)
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
