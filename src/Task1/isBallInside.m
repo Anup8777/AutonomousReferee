@@ -1,4 +1,4 @@
-function [in,ID] = isBallInside(PosBall,meta_data)
+function [in,ID, locID] = isBallInside(PosBall,matchData)
 %This is a function to check whether the ball is inside the field or not.
 %   Output of "in" is equal to 1 if the ball is inside the field.
 %   Otherwise, it is equal to 0.
@@ -9,12 +9,12 @@ function [in,ID] = isBallInside(PosBall,meta_data)
 
 %--------------------------------------------------------------------------
 %Field Parameters
-l=meta_data.var.linewidth;    %Line Width in meter
-y=meta_data.var.fieldwidth;   %Field Width in meter
-x=meta_data.var.fieldlength;  %Field Length in meter
+l=matchData.replay.metadata.var.linewidth;    %Line Width in meter
+y=matchData.replay.metadata.var.fieldwidth + 0.2;   %Field Width in meter
+x=matchData.replay.metadata.var.fieldlength;  %Field Length in meter
 %b=meta_data.var.ballradius;  %Ball Radius in meter
-g=meta_data.var.goalwidth;    %Goal Width in meter
-h=meta_data.var.goaldepth;    %Goal Depth in meter
+g=matchData.replay.metadata.var.goalwidth;    %Goal Width in meter
+h=matchData.replay.metadata.var.goaldepth;    %Goal Depth in meter
 %--------------------------------------------------------------------------
 
 %Polygon Definitions-------------------------------------------------------
@@ -68,37 +68,37 @@ RGP=[x/2,h+x/2,h+x/2,x/2,x/2;-g/2,-g/2,g/2,g/2,-g/2];
 [in_RGP,~]  = inpolygon(PosBall(1),PosBall(2),RGP(1,:),RGP(2,:));
 
 if in_IP==1
-    in=in_IP; ID='Inside';
+    in=in_IP; ID='Inside'; locID = 0;
 else
     if in_ULP==1
-        in=in_IP; ID='UpLine';
+        in=in_IP; ID='UpLine'; locID = 1;
     end
     if in_DLP==1
-        in=in_IP; ID='DownLine';
+        in=in_IP; ID='DownLine'; locID = 2;
     end
     if in_LUP==1
-        in=in_IP; ID='LeftUpCorner';
+        in=in_IP; ID='LeftUpCorner'; locID = 3;
     end
     if in_LDP==1
-        in=in_IP; ID='LeftDownCorner';
+        in=in_IP; ID='LeftDownCorner'; locID = 4;
     end
     if in_RDP==1
-        in=in_IP; ID='RightDownCorner';
+        in=in_IP; ID='RightDownCorner'; locID = 5;
     end
     if in_RUP==1
-        in=in_IP; ID='RightUpCorner';
+        in=in_IP; ID='RightUpCorner'; locID = 6;
     end
     if in_LGLP==1
-        in=in_IP; ID='LeftGoalLine';
+        in=in_IP; ID='LeftGoalLine'; locID = 7;
     end
     if in_RGLP==1
-        in=in_IP; ID='RightGoalLine';
+        in=in_IP; ID='RightGoalLine'; locID = 8;
     end
     if in_RGP==1
-        in=in_IP; ID='RightGoalArea';
+        in=in_IP; ID='RightGoalArea'; locID = 9;
     end
     if in_LGP==1
-        in=in_IP; ID='LeftGoalArea';
+        in=in_IP; ID='LeftGoalArea'; locID = 10;
     end
 end
 

@@ -3,11 +3,12 @@
 %This main script body also calls the function initFieldArea to get back X
 %and Y coordinates with [0,0] being the center of the field.
 %-----------------------------------------------------------------------------------------------------%
-
+function [Xcoordinates, Ycoordinates] = initFieldArea_main(matchData)
+replay = matchData.replay;
 
 %Loading the field parameters from mat file%
 %-----------------------------------------------------------------------------------------------------%
-load replaydata_08-Mar-2022_20_41.mat %loading mat file from turlte
+% load replaydata_15-Mar-2022_21_25.mat %loading mat file from turlte
 fieldWidth = replay.metadata.var.fieldwidth; %loading fieldwidth from mat file
 fieldLength = replay.metadata.var.fieldlength; %loading fieldlength from mat file
 fieldCenter = [fieldLength/2,fieldWidth/2]; %field center with respect actual length and and width of field
@@ -63,7 +64,7 @@ scatter(-fieldLength/2+replay.metadata.var.penaltyspot, 0, 'MarkerEdgeColor', 'w
 scatter(fieldLength/2-replay.metadata.var.penaltyspot, 0, 'MarkerEdgeColor', 'white', 'MarkerFaceColor','white','LineWidth', 0.1);
 scatter(0, 0, 'MarkerEdgeColor', 'white', 'MarkerFaceColor','white', 'LineWidth', 0.1);
 
-hold off;
+% hold off;
 
 %-------------------------------------------------------------------------------------------------------%
 
