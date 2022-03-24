@@ -45,12 +45,10 @@ The **Architecture Description** dcoument can be found in the following folder: 
  <p align="center">
    <img 
      width="400"
-     src="https://user-images.githubusercontent.com/20322579/159955570-ac132ae8-ea81-40cc-9ee9-f83f52347a4a.png"
+     src="https://user-images.githubusercontent.com/20322579/159957429-7cb072c6-291d-4578-b507-6846b93bfea2.png"
    >
  </p>
-
-
-
+ 
 <!-- Implementation -->
 ## Implementation and Validation
 
