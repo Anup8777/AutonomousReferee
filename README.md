@@ -10,7 +10,7 @@ README to be edited according to the need.
 2. [Feasibility Studies](#feasibility-studies)
 3. [System Architecture](#system-architecture)
 4. [Implementation and Validation](#implementation-and-validation)
-5. [How to get a flying start?](#how-to-get-a-flying-start)
+5. [How to get a smooth start?](#how-to-get-a-smooth-start)
 6. [Team](#team)
 
 <!-- ABOUT THE PROJECT -->
@@ -76,24 +76,26 @@ https://user-images.githubusercontent.com/20322579/159902028-0035ea5f-ba2e-4644-
   René van de Molengraft (M.J.G.v.d.Molengraft@tue.nl)<br />
   Ruben Beumer (r.m.beumer@tue.nl) <br />
 - In the Tech United repository there are tools that may be useful for the development of the AutoRef system<br />
-  **Greenfield**<br />
-  **Simulator**<br />
-  
-  **Refbox**<br />
-  
-  It is the tool that human referee use to send commands to TURTLES during the match. 
- <p align="center">
-   <img 
-     width="600"
-     src="https://user-images.githubusercontent.com/20322579/159948000-6834d03a-e049-4035-8793-65542db0a23d.png"
-   >
- </p>
+   **1. Greenfield**<br />
+   This is the tool, emulator, inside the Tech United reposoitory which can collect the real time data from soccer robots during the match and save the data in a \*.mat   file. <br />
+
+   **2. Simulator**<br />
+   This is a tool inside the Tech United repository which can be used to simulate the soccer matches. Different scenarios of a soccer match can be simulated by this tool which can be helpful for the design of the AutoRef system.<br />
+
+   **3. Refbox**<br />
+   It is the tool that human referee use to send commands to TURTLES during the match.<br />
+  <p align="center">
+    <img 
+      width="600"
+      src="https://user-images.githubusercontent.com/20322579/159948000-6834d03a-e049-4035-8793-65542db0a23d.png"
+    >
+  </p>
 
 
 - Ask for permission for using the security cameras.
   You may contact with Ömür Arslan (o.arslan@tue.nl) to ask for the permission.
 - Get in touch with MSD2021.
-- Get in touch with Matthias Briegel
+- Get in touch with Matthias Briegel<br />
   Matthias is the person who has previously worked on developing AutoRef system and he may share some interesting ideas for the development of the AutoRef system. (matthias_briegel@hotmail.com)
 
 <!-- Team -->
