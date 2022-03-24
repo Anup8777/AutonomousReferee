@@ -16,16 +16,16 @@ README to be edited according to the need.
 <!-- ABOUT THE PROJECT -->
 ## About The Project
 
-The goal of the project is to develop an autonomous referee system for soccer robots which can satisfy the following goal:
+The objective of the project is to develop an autonomous referee system for soccer robots which can satisfy the following goal:
 
-*"The final goal is to have a 5 minute long 2 against 2 robot soccer game, using the Tech United turtles, refereed by the system described above, which receives a positive recommendation by an experienced human referee. By positive recommendation we mean that the human referee acknowledges that the provided refereeing system, for that 5 minute long game, refereed the match well."*
+*"To have a 5 minute long 2 against 2 robot soccer game, using the Tech United turtles, refereed by the system described above, which receives a positive recommendation by an experienced human referee. By positive recommendation we mean that the human referee acknowledges that the provided refereeing system, for that 5 minute long game, refereed the match well."*
 
 The full description of the project can be found under docs/[autoref_2122 comments RD.pdf](https://github.com/Anup8777/AutonomousReferee/blob/main/docs/autoref_2122%20comments%20RD.pdf "autoref_2122 comments RD.pdf")
 
 
 <!-- Feasibility Analysis -->
 ## Feasibility Studies
-In order to develop the autonomous referee system different technologies have been taken into considerastion as follow:
+In order to develop the autonomous referee system different technologies have been taken into consideration as follow:
 - Using simulation
 - Using Drone + Camera
 - Using surveillance cameras to record the match
@@ -35,7 +35,7 @@ For each of the above technology a feasibility study document has been prepared 
 
 ![image](https://user-images.githubusercontent.com/20322579/159932182-10ca3719-1516-491d-8192-d3656c5a316b.png)
 
-Then each technology has been evaluated by PUGH matrix by each of the team members and it is decided to use TURTLEs as the main technology to develop the AutoRef system.
+Moreover, each technology has been evaluated by using a design-decision PUGH matrix. The team decided to use TURTLEs as the main technology to develop the AutoRef system according to the PUGH matrix result.
 
 <!-- System Architecture -->
 ## System Architecture
@@ -65,8 +65,8 @@ https://user-images.githubusercontent.com/20322579/159901992-aee37024-05e3-4a03-
 
 https://user-images.githubusercontent.com/20322579/159902028-0035ea5f-ba2e-4644-b3eb-ce7a2c7c0c54.mp4
 
-<!-- How to get a flying start -->
-## How to get a flying start?
+<!-- How to get a smooth start -->
+## How to get a smooth start?
 
 - It is recommended to not start from the scratch.
 - It is highly recommended to get in touch with the Tech United team and use the Tech United repository in case of using TURTLES. <br />
