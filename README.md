@@ -57,9 +57,19 @@ In order to develop the autonomous referee system different technologies have be
 
 
 <!-- Implementation -->
-## Implementation
+## Implementation and Validation
 
-The developed code for the Task1 and Task 2 can be found in the following folder. 
+The developed code for the Task 1 and Task 2 can be found in the following folder in GitHub repository: AutonomousReferee/[src](https://github.com/Anup8777/AutonomousReferee/tree/main/src "src")
+
+### Task1: Ball Out of Play
+Determine if the ball is in or out of pitch (BOOP).  
+
+https://user-images.githubusercontent.com/20322579/159901992-aee37024-05e3-4a03-b4ae-37d4e773a160.mp4
+
+### Task2: Determine if the ball has rolled freely for >0.5 m after kick
+
+https://user-images.githubusercontent.com/20322579/159902028-0035ea5f-ba2e-4644-b3eb-ce7a2c7c0c54.mp4
+
 
 <!-- CONTACT -->
 ## Team
@@ -67,12 +77,19 @@ The developed code for the Task1 and Task 2 can be found in the following folder
 This project has been carried out by the Mechatronic Systems Design (MSD) 2021 at Eindhoven University of Technology (TU/e) for the 1st in-house project in Block II of the program. The team members are as follow:
 
 Anup Padaki - System Architect (a.v.padaki@tue.nl)
+
 Cevahir Karagoz - Design Engineer (c.karagoz@tue.nl)
+
 Guilherme Pagatini - Project Manager (g.pagatini@tue.nl)
+
 Kian Azami - Design Engineer (k.azami@tue.nl)
+
 Marzhan Baubekova - Team Leader (m.baubekova@tue.nl)
+
 Meghna Mohamed - Design Engineer (m.mohamed@tue.nl)
+
 Shubo Zhang - Desgin Engineer (s.zhang6@tue.nl)
+
 Yuri Hudak - Design Engineer (y.f.hudak@tue.nl)
 
 
