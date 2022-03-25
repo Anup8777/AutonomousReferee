@@ -2,7 +2,6 @@
 <!--
 README to be edited according to the need.
 -->
-
 # Autonomous Referee System Project - MSD2021
 
 ## Table of Content
@@ -15,6 +14,7 @@ README to be edited according to the need.
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
+AutoRef MSD 2021 is a team contribution to the development of AutoRef, an autonomous referee for RoboCup Middle Size League (MSL) robot soccer. The team members are Mechatronic System Design (MSD) PDEng trainees at Eindhoven University of Technology (TU/e). The project development happened from February to March 2022 for the Block II in-house project. An archive initiated by MSD 2020 provides an overview of all team contributions downloadable with access to AutoRef's TU/e SharePoint folder (please, contact Rike Meijer to request access).
 
 The objective of the project is to develop an autonomous referee system for soccer robots which can satisfy the following goal:
 
@@ -25,13 +25,13 @@ The full description of the project can be found under docs/[autoref_2122 commen
 
 <!-- Feasibility Analysis -->
 ## Feasibility Studies
-In order to develop the autonomous referee system different technologies have been taken into consideration as follow:
-- Using simulation
+In order to develop the autonomous referee different technologies have been taken into consideration to create the Data to be implemented in the decision algorithm as follow:
+- Improve 2020 MSD simulation
 - Using Drone + Camera
-- Using surveillance cameras to record the match
+- Using surveillance cameras to record the match and create machine vision algorithm
 - Using TURTLE (Tech United soccer robots)
 
-For each of the above technology a feasibility study document has been prepared which can be found in: docs/[FeasibilityAnalysis](https://github.com/Anup8777/AutonomousReferee/tree/main/docs/FeasibilityAnalysis "FeasibilityAnalysis")
+For each of the above technology a feasibility study report has been prepared which can be found in: docs/[FeasibilityAnalysis](https://github.com/Anup8777/AutonomousReferee/tree/main/docs/FeasibilityAnalysis "FeasibilityAnalysis")
 
 ![image](https://user-images.githubusercontent.com/20322579/159932182-10ca3719-1516-491d-8192-d3656c5a316b.png)
 
@@ -40,7 +40,7 @@ Moreover, each technology has been evaluated by using a design-decision PUGH mat
 <!-- System Architecture -->
 ## System Architecture
 
-The **Architecture Description** dcoument can be found in the following folder: docs/[Architecture](https://github.com/Anup8777/AutonomousReferee/tree/main/docs/Architecture "Architecture")
+The **Architecture Description** document can be found in the following folder: docs/[Architecture](https://github.com/Anup8777/AutonomousReferee/tree/main/docs/Architecture "Architecture")
 
  <p align="center">
    <img 
@@ -52,11 +52,9 @@ The **Architecture Description** dcoument can be found in the following folder: 
 <!-- Implementation -->
 ## Implementation and Validation
 
-The developed code in MATLAB for the Task 1 and Task 2 can be found in the following folder in the GitHub repository: AutonomousReferee/[src](https://github.com/Anup8777/AutonomousReferee/tree/main/src "src")
+The developed code in MATLAB for the Task 1 and Task 2 can be found in the following folder in GitHub repository: AutonomousReferee/[src](https://github.com/Anup8777/AutonomousReferee/tree/main/src "src")
  
-The MATLAB codes need \*.mat file as an input which contains the recorded data of a soccer robot match. We have planned different soccer matches and scenarios and saved all the data in \*.mat files. The data of these matches or scenarios can be accessesed in the following folder in the GitHub repository: AutonomousReferee/[data](https://github.com/Anup8777/AutonomousReferee/tree/main/data "data")
- 
-For example, the developed codes can be used to detect the violation in the follwoing two scenarios.
+2021 MSD AutoRef can be used to detect the violation in the following two scenarios.
  
 ### Task1: Ball Out of Play
 Determine if the ball is in or out of pitch (BOOP).  
@@ -108,8 +106,8 @@ https://user-images.githubusercontent.com/20322579/159902028-0035ea5f-ba2e-4644-
   </p>
 
 
-- Ask for permission for using the security cameras.
-  You may contact with Ömür Arslan (o.arslan@tue.nl) to ask for the permission.
+- Ask for permission for using the surveillance cameras at the Robotics Lab.
+  You may contact Ömür Arslan (o.arslan@tue.nl) to ask for the permission.
 - Get in touch with MSD2021.
 - Get in touch with Matthias Briegel<br />
   Matthias is the person who has previously worked on developing AutoRef system and he may share some interesting ideas for the development of the AutoRef system. (matthias_briegel@hotmail.com)
