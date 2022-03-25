@@ -1,69 +1,61 @@
-% Visualization of Task2
-%% Initialization
-clear all
-close all
+function [evidence] = task2(matchObject, startStream, finishStream)
 
-%% Getting data
-% Load the specified .mat file and assign it to matchData
-matchData = load('replaydata_15-Mar-2022_21_01.mat'); %loading mat file from turlte);
-% Adjust field length and width (sometimes this is necessary if the .mat
-% file dimensions don't seem to make sense, in the case they were input
-% incorrectly
-flength = 12.1;
-fwidth = 8.5;
-% Overwrite the field dimensions in the .mat file
-matchData.replay.metadata.var.fieldlength = flength;
-matchData.replay.metadata.var.fieldwidth = fwidth;
-
-% Get the entire ball trajectory from the .mat file
-useWeightAve = 1; % 1 in case if weight averaging is used  
-[ballX, ballY, ballZ] = getBallPosition(matchData, useWeightAve, 2,3);
-% Get positions at all kicks during the game according to special treshold
-accelThreshold = 2; 
-[ball_x, ball_y, ball_z, kickInd] = detectKickBall(matchData,useWeightAve, accelThreshold, 2,3);
-
-% violation detection
-[distViolation, indxViolation, player_id] = checkDistance(ball_x, ball_y, kickInd);
-
-% create violation log
-logTask2 = zeros(1,size(matchData.replay.data,2));
-logTask2(indxViolation) = 1; 
-logEvidence(matchData,logTask2,distViolation,indxViolation, ball_x, ball_y, kickInd, player_id);
-
+% Get ball position from match object
+ballPos = matchObject.BallPosition;
 % Concatenate ball X and Y coordinates
-ballCoordsAll = [ballY; ballX];
+ballCoordsAll = [ballPos(1,:); ballPos(2,:)];
+ballX = ballPos(1,:); 
+ballY = ballPos(2,:); 
+ballZ = ballPos(3,:);
 
 % Apply a simple 2D smoothing filter to the ball trajectory (optional)
 h = fspecial('average', [1 10]);
 ballCoordsAll = filter2(h, ballCoordsAll, 'same');
 
-% Initialize a matrix for all player coordinates where each player's X and
-% Y coordinate trajectories are consecutive rows in the matrix i.e. Player
-% 1 uses rows 1 & 2 (for X and Y, respectively)
-playerCoordsAll = zeros(14,size(ballCoordsAll,2));
-theta = 0; % Initialize a temp variable for player orientation (not used)
-for i = 1:7
-    turtleN = i;
-    % Get player trajectories from the .mat file
-    [playerCoordsAll(i*2,:), playerCoordsAll(i*2-1,:), theta, playerIDColor] = getPlayerPosition(matchData,(turtleN));
+% Get all Player coordinates from match object
+playerCoordsAll = matchObject.PlayerPosition;
+
+% Get positions at all kicks during the game according to special treshold
+useWeightAve = 1;
+accelThreshold = 2; 
+playerIDs = matchObject.PlayerID4BallEst;
+[ball_x, ball_y, ball_z, kickInd] = detectKickBall(matchObject.GameMatchData, useWeightAve, accelThreshold, playerIDs);
+
+% violation detection
+[distViolation, indxViolation] = checkDistance(ball_x, ball_y, kickInd);
+
+% get id of player closest to the ball at violaion
+player_id = zeros(size(indxViolation));
+for i = 1:size(indxViolation,2)
+    player_id(i) = matchObject.getPlayerNearBall(ballX(indxViolation), ballY(indxViolation), indxViolation);
 end
+% create violation log
+logTask2 = zeros(1,size(matchObject.GameMatchData.replay.data,2));
+logTask2(indxViolation) = 1; 
+logEvidence(matchObject.GameMatchData,logTask2,distViolation,indxViolation, ball_x, ball_y, kickInd, player_id);
 
 %% Animation
 % Set specific start and finish indices to select a subsection of the data
-caseN = 2;
-if caseN == 1
-    start = 4100;
-    finish = 4200;
-else
-    start = 10250;
-    finish = 10350;
-end
+% caseN = 2;
+% if caseN == 1
+%     start = 4100;
+%     finish = 4200;
+% else
+%     start = 10250;
+%     finish = 10350;
+% end
+
+
+% Set specific start and finish indices to select a subsection of the data
+start = startStream;
+finish = finishStream;
+
 bufferSize = 300; % Stream buffer length
 ballStream = NaN(2,bufferSize); % Initialize the ball stream 
 playerStream = NaN(14,bufferSize); % Initialize the player stream
 
 figure('units','normalized','outerposition',[0 0 1 1])
-[fieldX, fieldY] = initFieldArea_main(matchData); % Get the matrix of field 
+[fieldX, fieldY] = initFieldArea_main(matchObject.GameMatchData); % Get the matrix of field 
 % coordinates and add the field graphic to the figure
 daspect([1,1,1])
 axis([-10 10 -10 10]);
@@ -126,7 +118,7 @@ for i = start:finish
         
         
         disp('Violation at ')
-        timeViolation = getRealTime(i, matchData.replay.time); 
+        timeViolation = getRealTime(i, matchObject.GameMatchData.replay.time); 
         disp(timeViolation)
         disp('At Distance: ')
         disp(distViolation((indxViolation==i)));
@@ -134,7 +126,9 @@ for i = start:finish
        
         message = sprintf('VIOLATION! Roll distance = %0.2f m at %s', distViolation(J), timeViolation);
         addpoints(aniball,ballX(i), ballY(i));
-        txt = text(-6,-6,message, 'Color', 'r');       
+        txt = text(-6,-6,message, 'Color', 'r');  
+    else
+        message = 'No violation detected.'
     end
 
     drawnow
@@ -148,4 +142,7 @@ end
 
 if recordVideo == 1
     close(myVideo)
+end
+
+evidence = message;
 end

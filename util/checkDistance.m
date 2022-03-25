@@ -6,7 +6,7 @@
 % dist, indxAtViolation - distance of free roll at which ball was
 % interrupted and indices when violation happends
 
-function [dist, indxAtViolation, playerID] = checkDistance(bx, by, ind)
+function [dist, indxAtViolation] = checkDistance(bx, by, ind)
 
 dx = diff(bx);
 dy = diff(by);
@@ -18,11 +18,5 @@ dist  = hypot(dx,dy);
 indxAtViolation = ind(indx);
 %indxAtViolation = indxAtViolation - 1;
 dist = dist(indx);
-
-% get id of player closest to the ball at violaion
-playerID = zeros(size(indx));
-for i = 1:size(indxAtViolation,2)
-    playerID(i) = getPlayerID(matchData, bx(indx), by(indx), indxAtViolation);
-end
 
 end

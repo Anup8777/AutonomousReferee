@@ -1,4 +1,5 @@
-% function to log evidance of AutoRef decision regarding task 2 
+% function to log evidance of all AutoRef decisions (currently limited to 
+% task 1 and task 2 implementations)
 % Inputs:
 % matchData - load(mat file of replay data of the soccer match)
 % dist, indxAtViolation - distance of free roll at which ball was

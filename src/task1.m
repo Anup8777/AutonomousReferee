@@ -1,68 +1,30 @@
-% task1.main
+function [evidence] = task1(matchObject, startStream, finishStream)
 
-%{ 
-This script gets data and calls all required functions to determine:
-
-1. Whether the ball is inside or outside the field
-    and which boundary line it crossed when going out
-2. Which player last touched the ball before it went out
-    and which team to assign possession to.
-
-Displays an animation of the ball and player movement that generated the
-decision
-
-%}
-
-clear all
-close all
-
-% Load the specified .mat file and assign it to matchData
-[matFile, path] = uigetfile('*.mat');
-matFileFull = fullfile(path, matFile);
-matchData = load(matFileFull);
-% Adjust field length and width (sometimes this is necessary if the .mat
-% file dimensions don't seem to make sense, in the case they were input
-% incorrectly
-flength = 12.1;
-fwidth = 8.5;
-% Overwrite the field dimensions in the .mat file
-matchData.replay.metadata.var.fieldlength = flength;
-matchData.replay.metadata.var.fieldwidth = fwidth;
-
-% Get the entire ball trajectory from the .mat file
-[ballY, ballX, ballZ] = getBallPosition(matchData, 1, 2,3);
-
+% Get ball position from match object
+ballPos = matchObject.BallPosition;
 % Concatenate ball X and Y coordinates
-ballCoordsAll = [ballX; ballY];
+ballCoordsAll = [ballPos(1,:); ballPos(2,:)];
 
 % Apply a simple 2D smoothing filter to the ball trajectory (optional)
 h = fspecial('average', [1 10]);
 ballCoordsAll = filter2(h, ballCoordsAll, 'same');
 
-% Initialize a matrix for all player coordinates where each player's X and
-% Y coordinate trajectories are consecutive rows in the matrix i.e. Player
-% 1 uses rows 1 & 2 (for X and Y, respectively)
-playerCoordsAll = zeros(14,size(ballCoordsAll,2));
-theta = 0; % Initialize a temp variable for player orientation (not used)
-for i = 1:7
-    turtleN = i;
-    % Get player trajectories from the .mat file
-    [playerCoordsAll(i*2,:), playerCoordsAll(i*2-1,:), theta, playerIDColor] = getPlayerPosition(matchData,(turtleN));
-end
+% Get all Player coordinates from match object
+playerCoordsAll = matchObject.PlayerPosition;
 
 %% Generate a fake data stream from the .mat file
 
 % Set specific start and finish indices to select a subsection of the data
-start = 12200;
-finish = 12500;
+start = startStream;
+finish = finishStream;
 
 bufferSize = 300; % Stream buffer length
 ballStream = NaN(2,bufferSize); % Initialize the ball stream 
 playerStream = NaN(14,bufferSize); % Initialize the player stream
 
 figure
-[fieldX, fieldY] = initFieldArea_main(matchData); % Get the matrix of field 
-pause(5)
+[fieldX, fieldY] = initFieldArea_main(matchObject.GameMatchData); % Get the matrix of field 
+% pause(5)
 % coordinates and add the field graphic to the figure
 daspect([1,1,1])
 axis([-10 10 -10 10]);
@@ -86,7 +48,7 @@ for i = start:finish
     playerStream = [playerStream(:,2:end), playerCoordsAll(:,i)];
     % Check if the current ball position is inside the field, returns "0"
     % if it is, "1" if not
-    [in, ID, locID] = isBallInside([ballStream(1,end); ballStream(2,end)],matchData);
+    [in, ID, locID] = isBallInside([ballStream(1,end); ballStream(2,end)],matchObject.GameMatchData);
     if in==0
         ID;
         ballStream(1:2,end);
@@ -95,7 +57,7 @@ for i = start:finish
         % ball
         playerID = lastPlayerTouched(ballStream, playerStream);
         % Assign possession based on the player's team ID (0 or 1)
-        violationTeam = assignPossession(playerID, locID, matchData);
+        violationTeam = assignPossession(playerID, locID, matchObject.GameMatchData);
         ballOutText = "Player " + playerID + " kicked the ball out at coordinate: "...
             + ballStream(1,end) + ", " + ballStream(2,end) + newline + " on the " ...
             + ID + " border of the field." + newline + "Possession "...
@@ -125,4 +87,6 @@ for i = start:finish
     legend('','','','','','','','', 'Ball', 'P2', 'P3', 'P5', 'P6','Position',[0.67 0.43 0.02 0.2])
     drawnow
     pause(0.1);
+end
+evidence = ballOutText;
 end

@@ -9,10 +9,10 @@
 % Output:
 % x, y, and z coordinates of the ball position
 
-function [ball_x, ball_y, ball_z, ind] = detectKickBall(matchData,useWeight, accel_th, varargin)
+function [ball_x, ball_y, ball_z, ind] = detectKickBall(matchData,useWeight, accel_th, playerIDs)
 
 %get velocity of the ball
-[bvx, bvy, ~] = getBallVelocity(matchData, useWeight, varargin{:});
+[bvx, bvy, ~] = getBallVelocity(matchData, useWeight, playerIDs);
 %speed_ball = hypot(bvx,bvy);
 %[~, speed_ind, ~] = find(speed_ball);
 
@@ -24,7 +24,7 @@ accel_ball = hypot(bax, bay);
 [~, accel_ind, ~] = find(accel_ball>accel_th); 
 
 %get output: ball position when acceleration exceeds threshold value
-[bx, by, bz] = getBallPosition(matchData, useWeight, varargin{:});
+[bx, by, bz] = getBallPosition(matchData, useWeight, playerIDs);
 
 ball_x = bx(accel_ind);
 ball_y = by(accel_ind);
