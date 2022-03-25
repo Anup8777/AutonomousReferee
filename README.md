@@ -71,7 +71,7 @@ https://user-images.githubusercontent.com/20322579/159902028-0035ea5f-ba2e-4644-
 ## How to get a smooth start?
 
 - It is recommended to not start from the scratch.
-- It is highly recommended to get in touch with the Tech United team and use the Tech United repository in case of using TURTLES. <br />
+- It is highly recommended to get in touch with the Tech United team and use the Tech United repository in case of using TURTLEs. <br />
   Some of the people that you can get in touch with:<br />
   Tech United Website: https://www.techunited.nl/en/<br />
   Tech United (Techunited@tue.nl)<br />
@@ -99,7 +99,7 @@ https://user-images.githubusercontent.com/20322579/159902028-0035ea5f-ba2e-4644-
   </p>
 
    **3. Refbox**<br />
-   It is the tool that human referee use to send commands to TURTLES during the match.<br />
+   It is the tool that human referee use to send commands to TURTLEs during the match.<br />
   <p align="center">
     <img 
       width="600"
