@@ -52,7 +52,9 @@ The **Architecture Description** dcoument can be found in the following folder: 
 <!-- Implementation -->
 ## Implementation and Validation
 
-The developed code in MATLAB for the Task 1 and Task 2 can be found in the following folder in GitHub repository: AutonomousReferee/[src](https://github.com/Anup8777/AutonomousReferee/tree/main/src "src")
+The developed code in MATLAB for the Task 1 and Task 2 can be found in the following folder in the GitHub repository: AutonomousReferee/[src](https://github.com/Anup8777/AutonomousReferee/tree/main/src "src")
+ 
+The MATLAB codes need \*.mat file as an input which contains the recorded data of a soccer robot match. We have planned different soccer matches and scenarios and saved all the data in \*.mat files. The data of these matches or scenarios can be accessesed in the following folder in the GitHub repository: AutonomousReferee/[data](https://github.com/Anup8777/AutonomousReferee/tree/main/data "data")
  
 For example, the developed codes can be used to detect the violation in the follwoing two scenarios.
  
