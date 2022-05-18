@@ -74,7 +74,7 @@ https://user-images.githubusercontent.com/20322579/159902028-0035ea5f-ba2e-4644-
   Some of the people that you can get in touch with:<br />
   Tech United Website: https://www.techunited.nl/en/<br />
   Tech United (Techunited@tue.nl)<br />
-  René van de Molengraft (M.J.G.v.d.Molengraft@tue.nl)<br />
+  René van de Molengraft - Project Sponsor and Technical Consultant (M.J.G.v.d.Molengraft@tue.nl)<br />
   Ruben Beumer (r.m.beumer@tue.nl) <br />
 - In the Tech United repository there are tools that may be useful for the development of the AutoRef system.<br />
    **1. Greenfield**<br />
