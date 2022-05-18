@@ -23,7 +23,7 @@ The objective of the project is to develop an autonomous referee system for socc
 
 The full description of the project can be found under docs/[autoref_2122 comments RD.pdf](https://github.com/Anup8777/AutonomousReferee/blob/main/docs/autoref_2122%20comments%20RD.pdf "autoref_2122 comments RD.pdf")
 
-The wiki page of the AutoRef can be found <a href="[/definition/computer](http://cstwiki.wtb.tue.nl/index.php?title=AutoRef_-_Autonomous_Referee_System)">here</a> which has been written by the previous years trainees.
+The wiki page of the AutoRef can be found <a href="http://cstwiki.wtb.tue.nl/index.php?title=AutoRef_-_Autonomous_Referee_System">here</a> which has been written by the previous years trainees.
 
 <!-- Feasibility Analysis -->
 ## Feasibility Studies
