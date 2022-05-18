@@ -15,7 +15,7 @@ README to be edited according to the need.
 
 <!-- ABOUT THE PROJECT -->
 ## About The Project
-AutoRef MSD 2021 is a team contribution to the development of AutoRef, an autonomous referee for RoboCup Middle Size League (MSL) robot soccer. The team members are Mechatronic System Design (MSD) PDEng trainees at Eindhoven University of Technology (TU/e). The project development happened from February to March 2022 for the Block II in-house project. An archive initiated by MSD 2020 provides an overview of all team contributions downloadable with access to AutoRef's TU/e SharePoint folder (please, contact Rike Meijer to request access).
+AutoRef MSD 2021 is a team contribution to the development of AutoRef, an autonomous referee for RoboCup Middle Size League (MSL) robot soccer. The team members are Mechatronic System Design (MSD) PDEng trainees at Eindhoven University of Technology (TU/e). The project development happened from February to March 2022 for the Block II in-house project. An archive initiated by MSD 2020 provides an overview of all team contributions downloadable with access to AutoRef's TU/e SharePoint folder. You can contact Rike Meijer to request access.
 
 The objective of the project is to develop an autonomous referee system for soccer robots which can satisfy the following goal:
 
